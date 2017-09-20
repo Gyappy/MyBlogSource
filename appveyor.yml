@@ -7,11 +7,11 @@ environment:
 install:
   - node --version
   - npm --version
-  - sudo npm install
-  - sudo npm install hexo-cli -g
+  - npm install
+  - npm install hexo-cli -g
 
 build_script:
-  - sudo hexo generate
+  - hexo generate
 
 artifacts:
   - path: public
