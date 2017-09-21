@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 顾先生的后院
-subtitle: 欲望使人进步|没有什么是点赞不能解决的事情,如果有,那就点赞+商业吹捧.
+title: Gatsby
+subtitle: 世上没有什么是点star不能解决的事情.也没有如果.
 description: Actually my real name is Guchenhui,url is gyappy.github.io.
 author: GuChenhui
-language:
+language: zh-CN
 timezone:
 
 # URL
@@ -72,7 +72,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: material
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
