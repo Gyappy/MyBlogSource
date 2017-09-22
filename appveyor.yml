@@ -1,6 +1,7 @@
 clone_depth: 5
 
 environment:
+  nodejs_version: "6"
   access_token:
     secure: mXyUYoFFkWeNZt2bJ1rzOnNgUm8rEGPDhz+UY1M9cRHqrOZ/BmSplweK6CTe75iv
 
@@ -9,9 +10,7 @@ install:
   - npm --version
   - npm cache clean
   - npm install
-  - npm install -g n
   - npm install hexo-cli -g
-  - n 6.11.2
 
 build_script:
   - hexo -version
