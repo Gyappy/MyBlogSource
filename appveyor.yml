@@ -9,7 +9,9 @@ install:
   - npm --version
   - npm cache clean
   - npm install
+  - npm install -g n
   - npm install hexo-cli -g
+  - n 6.11.2
 
 build_script:
   - hexo -version
