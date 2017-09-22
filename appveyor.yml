@@ -7,12 +7,12 @@ environment:
 install:
   - node --version
   - npm --version
-  - hexo --version
   - npm cache clean
   - npm install
   - npm install hexo-cli -g
 
 build_script:
+  - hexo -version
   - hexo generate
 
 artifacts:
