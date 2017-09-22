@@ -7,11 +7,11 @@ tags: QRCode
 ![](http://jietu-10024907.file.myqcloud.com/ktarmrsfgrqdomiihyewsqoumwvzpsah.jpg)
 
 ## 目录
-###### 背景与前言
-###### 前置知识
-###### encode
-###### decode
-
+* ### 背景与前言
+* ### 前置知识
+* ### encode
+* ### decode
+* ### 下节预告
 
 ## 背景与前言
   开篇先给看官道个歉，对不起，这是标题党，没有抉奥阐幽，也没有天地一指，万物一马的梗概与剖析。本文是笔者在维护公司二维码扫描库时，被叫成二维码master，但大都局限于应用层一些UI改动和接口调整，是兔丝燕麦般的master.于是不堪受辱，业余时间研究学习了二维码相关的知识，然后总结出的一些粗浅认识.顺便说一句,本文篇幅短小,看完它的时间只比你闭气不呼吸能坚持的时间稍微长一点。
@@ -97,7 +97,7 @@ tags: QRCode
   ![](http://jietu-10024907.file.myqcloud.com/vkjytdumvleazllykrqiznaacybbuuxz.jpg)
   支持如下编码:
   
-  * ##### Numeric mode|数字编码:
+  * #### Numeric mode|数字编码:
   
     数据类型编码(4位)+数据长度编码(根据version转成10或12或14位二进制数)+从左到右,
     每3个数字为一组,转成10位二进制数,剩下不满三位的转成4或7位二进制数。
@@ -111,7 +111,7 @@ tags: QRCode
     
     公式B=4+C+10(D DIV 3)+R.
     
-  * ##### Alphanumeriv mode|字符编码:0~9,A~Z,以及一些符号和空格。
+  * #### Alphanumeriv mode|字符编码:0~9,A~Z,以及一些符号和空格。
   
     编码方式和数字编码类似,区别是以2个字符为一组,转成11位二进制数,不满2个字符的转成6位。(a,b)-->a*45+b-->binary
     
@@ -119,13 +119,13 @@ tags: QRCode
   
   ![](http://jietu-10024907.file.myqcloud.com/qjyzvplczaelpabyobajdvdeuqdrilso.jpg)
   
-  * ##### Byte mode|字节编码:
+  * #### Byte mode|字节编码:
   
     公式B = 4 + C + 8D.
   
   ![](http://jietu-10024907.file.myqcloud.com/sawgmkdfbpnsfkdstcdxujkvxpefvrlv.jpg)
   
-  * ##### Mixing mode|混合编码
+  * #### Mixing mode|混合编码
     
     各种类型的组合编码。
    
@@ -144,7 +144,7 @@ tags: QRCode
   
 * ### 纠错编码
   为了能被纠错算法处理,将解析出的码字序列分块。然后把纠错码字拼到数据码字后面。有上文提到的L,M,Q,H四种纠错级别.
-  * ##### 纠错算法:
+  * #### 纠错算法:
   
     可纠正两种类型的错误,拒读错误(错误码字的位置已知)和替代错误(错误码字的位置未知).拒读错误是没有扫描到或者无法译码的字符,替代错误是错误译码的字符。一个替代错误需要两个纠错码字来纠正。
     
@@ -157,8 +157,7 @@ tags: QRCode
     
     官方的除法电路图示是这样的:
     
-    ![](http://jietu-10024907.file.myqcloud.com/lqcuilltjvbmxvxqkvkolrouzixstnyi.jpg)
-   
+    ![](http://jietu-10024907.file.myqcloud.com/lqcuilltjvbmxvxqkvkolrouzixstnyi.jpg) 
 * ### 构造最终数据信息
   将数据码字的块和纠错码字的块以行列交织的方式排列。
   
@@ -185,6 +184,7 @@ tags: QRCode
   ![](http://jietu-10024907.file.myqcloud.com/fmkvtapizuuigitqakiwvtengsuldkrp.jpg)
   ![](http://jietu-10024907.file.myqcloud.com/hkujssasjqvcwqavutqwjlbwqfbbztjw.jpg)
   ![](http://jietu-10024907.file.myqcloud.com/pwxdkinbaoqyzvjkpfzqdrgurphdnuey.jpg)
+  
 * ### 打上掩码
   为了可靠性,使用掩码图形让矩阵中的黑白色块比例接近1:1并均匀分布,尽可能避免探测图形出现在别的区域.所以每个二维码咋一看,都是一模一样。
   
