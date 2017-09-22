@@ -6,8 +6,7 @@ tags: QRCode
 
 ![](http://jietu-10024907.file.myqcloud.com/ktarmrsfgrqdomiihyewsqoumwvzpsah.jpg)
 
-目录:
----
+## 目录
 ###### 背景与前言
 ###### 前置知识
 ###### encode
@@ -17,7 +16,7 @@ tags: QRCode
 ## 背景与前言
   开篇先给看官道个歉，对不起，这是标题党，没有抉奥阐幽，也没有天地一指，万物一马的梗概与剖析。本文是笔者在维护公司二维码扫描库时，被叫成二维码master，但大都局限于应用层一些UI改动和接口调整，是兔丝燕麦般的master.于是不堪受辱，业余时间研究学习了二维码相关的知识，然后总结出的一些粗浅认识.顺便说一句,本文篇幅短小,看完它的时间只比你闭气不呼吸能坚持的时间稍微长一点。
   
-  有任何问题和指导建议,可以联系我讨论:416676773@qq.com
+  有任何问题和指导建议,可以联系我讨论:416676773@qq.com 或者 guchenhui1993@gmail.com
 ## 前置知识
 * ### 不同码制:
   Data Matrix,MaxiCode, Aztec,QR Code, Vericode,PDF417,Ultracode,Code 49,Code 16K等
